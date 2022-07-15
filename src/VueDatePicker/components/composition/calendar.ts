@@ -258,7 +258,7 @@ export const useCalendar = (
         if (modelValue.value) {
             if (isModelValueRange(modelValue.value)) {
                 if (modelValue.value.length === 2 && !props.multiDates) {
-                    assignMonthAndYear(modelValue.value[0], fromMount);
+                    assignMonthAndYear(modelValue.value[1], fromMount);
                     hours.value = [
                         getHours(modelValue.value[0]),
                         modelValue.value[1] ? getHours(modelValue.value[1]) : getHours(new Date()),
